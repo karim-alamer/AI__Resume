@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --clr-dark-grey: #1C2120 ;
+    --clr-light-grey: #2A364E;
+    --clr-blue-dark: #1A1C6A;
+    --clr-white: #fff;
+    --clr-bright: #EFF2F9;
+    --clr-dark: #1e2532;
+    --clr-black: #000;
+    --clr-grey: #8F8E8E;
+    --clr-green: #084C41;
+    --font-poppins: 'Poppins', sans-serif;
+    --font-manrope: 'Manrope', sans-serif;;
+    --transition: all 300ms ease-in-out;
+}
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 10px;
+}
+body{
+    margin: 0;
+    padding-top: 10vh;
+    padding-right: 7vw;
+    background-color: #1C2120;
+    background-image: url(path6.svg);
+    background-repeat: repeat;
+    font-family: var(--font-poppins);
+    font-size: 1.6rem;
+}
+
+#grid_container{
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 0.1fr 2fr;
+    grid-template-areas: 'navbar navbar' 'form_container img_container' 'form_container img_container';
+    background-color: #fff;
+    height: 90vh;
+    gap: 10px;
+    border-top-right-radius: 7rem;
+}
+
+#navbar{
+    grid-area: navbar;
+    width: 100%;    
+}
+#form_container{
+    grid-area: form_container;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#form_container h1{
+    text-align: center;
+    line-height: 4rem;
+    font-size: 4.5rem;
+}
+
+#form_container h5{
+    text-align: center;
+    margin-bottom:1rem ;
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: #535864;
+    margin-bottom: 4rem;
+}
+
+#form_container h5 a{
+    text-align: center;
+    text-decoration: none;
+    color: #535864;
+}
+
+
+#grid_container > div{
+    font-size: 30px;
+}
+#form_container form{
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+}
+input::placeholder{
+font-size: 1.5rem;}
+#form_container label {
+    text-align: left;
+    color: #000 ;
+    font-size: 1.1rem;
+    letter-spacing: 0.3rem;
+    max-height: fit-content;
+}
+
+#form_container input[name="name"], input[name="email"], input[name="password"]{
+    width: 285px;
+    height: 50px;
+    border-radius: 1rem;
+    border-color: white;
+    border: none;
+    background-color: #8f8e8e69 ;
+    color: #000 ;
+    font-size: 2.2rem;display: flex;
+
+}
+
+#submit_button{
+    width: 300px;
+    height: 5rem;
+    border-radius: 0.7rem;
+    border-color: white;
+    border: none;
+    background-color: #000000 ;
+    color: white;
+    font-size: 2.3rem;
+}
+
+#img_container{
+    grid-area: img_container; 
+    max-height:100% ;
+    justify-self: left;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+
+#img_container img{
+    position: relative;
+    width: 400px;
+    height: 400px;
+}
+
+#user_icon{
+    float: right;
+    margin: 20px;
+    margin-right: 70px;
+}
+
+#menu_icon{
+    margin: 20px;
+    margin-left: 20px;
+}
+
+@media screen and (max-width:740px) {
+    body{
+        padding-right: 0;
+        padding-top: 20vh;
+    }
+    #grid_container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
+
+    #navbar{
+        display: none;
+    }
+    
+    #img_container{
+        display: none;
+    }
+
+}
